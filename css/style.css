@@ -20,10 +20,10 @@
   --accent-rgb: 0, 212, 170;
   --dark-bg: #0A0A1A;
   --darker-bg: #060612;
-  --card-bg: #12122A;
-  --card-bg-hover: #1A1A3A;
-  --glass-bg: rgba(18, 18, 42, 0.7);
-  --glass-border: rgba(108, 60, 225, 0.15);
+  --card-bg: rgba(18, 18, 42, 0.6);
+  --card-bg-hover: rgba(26, 26, 58, 0.8);
+  --glass-bg: rgba(18, 18, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
   --text-primary: #FFFFFF;
   --text-secondary: #B0B0CC;
   --text-muted: #6B6B8D;
@@ -260,6 +260,16 @@ p {
   align-items: center;
   gap: 8px;
   z-index: 1001;
+}
+
+.brand-logo {
+  height: 45px;
+  width: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 4px 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
 }
 
 .logo-text {
@@ -617,12 +627,15 @@ p {
 
 .service-card {
   background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: 40px 30px;
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
+  will-change: transform, box-shadow;
 }
 
 .service-card::before {
@@ -927,11 +940,14 @@ p {
 
 .testimonial-card-inner {
   background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: 40px;
   text-align: center;
   position: relative;
+  will-change: transform;
 }
 
 .testimonial-card-inner::before {
@@ -2287,6 +2303,10 @@ p {
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
+}
+
+.footer-logo .brand-logo {
+  height: 50px;
 }
 
 .footer-desc {
