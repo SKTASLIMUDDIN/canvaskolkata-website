@@ -1,0 +1,11 @@
+# Canvas Kolkata Website
+# https://canvaskolkata.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://canvaskolkata.com/sitemap.xml
+
+# Block access to development files
+Disallow: /css/
+Disallow: /js/
