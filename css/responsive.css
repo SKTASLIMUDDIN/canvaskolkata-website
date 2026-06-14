@@ -188,6 +188,15 @@
 
 /* ===== MAX 768px — Small Tablets ===== */
 @media (max-width: 768px) {
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-btns .btn {
+    width: 100%;
+    text-align: center;
+  }
+
   :root {
     --section-padding: 60px 0;
     --container-padding: 0 20px;

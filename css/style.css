@@ -80,6 +80,8 @@ html {
   scroll-padding-top: var(--navbar-height);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -89,6 +91,8 @@ body {
   color: var(--text-primary);
   background-color: var(--dark-bg);
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 a {
@@ -2642,4 +2646,12 @@ p {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
+}
+
+/* ===== HERO BTNS FIX ===== */
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
 }
